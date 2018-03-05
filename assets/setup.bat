@@ -21,7 +21,7 @@ RD /S /Q "%SDK_TMP_DIR%"
 MD "%ORACLE_HOME%\network"
 MD "%ORACLE_HOME%\network\admin"
 xcopy /Y "%CURRENT_DIR%TNSNAMES.ORA" "%ORACLE_HOME%\network\admin"
-xcopy /Y "%CURRENT_DIR%oci8_windows_amd64.pc" "%ORACLE_HOME%\oci8.pc"
+xcopy /Y "%CURRENT_DIR%oci8_windows_amd64.pc" "%ORACLE_HOME%\oci8.pc*"
 
 WHERE choco
 IF %ERRORLEVEL% NEQ 0 (
