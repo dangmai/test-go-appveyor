@@ -28,7 +28,7 @@ IF %ERRORLEVEL% NEQ 0 (
     REM Install Chocolatey
     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 )
-choco install -y msys2
+start cmd.exe @cmd /k "choco install -y msys2"
 C:\tools\msys64\usr\bin\bash.exe -l -c "pacman -Syu --noconfirm --ask=20 mingw-w64-x86_64-gcc mingw64/mingw-w64-x86_64-pkg-config git"
 
 SETX ORACLE_HOME %ORACLE_HOME%
