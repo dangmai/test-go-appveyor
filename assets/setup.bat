@@ -36,5 +36,5 @@ SETX OCI_LIB %ORACLE_HOME%\sdk\lib
 SETX TNS_ADMIN %ORACLE_HOME%\network\admin
 SETX PKG_CONFIG %ORACLE_HOME%
 
-pathed /APPEND C:\tools\msys64\mingw64\bin /USER
-pathed /APPEND C:\tools\msys64\usr\bin /USER
+%CURRENT_DIR%assets\pathed /APPEND C:\tools\msys64\mingw64\bin /USER
+%CURRENT_DIR%assets\pathed /APPEND C:\tools\msys64\usr\bin /USER
