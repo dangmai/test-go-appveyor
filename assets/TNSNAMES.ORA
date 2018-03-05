@@ -1,0 +1,30 @@
+PROD_LINUX.world=
+       (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=TCP)(HOST=Tmnadbp2.Tmn.Int)(PORT=1522))
+            (CONNECT_DATA=
+                (SERVICE_NAME=TMNEPROD))
+        )
+Linux_Dev1.world=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=TCP)(HOST=TMNMDBD3.Tmn.Int)(PORT=1523))
+            (CONNECT_DATA=
+                (SERVICE_NAME=TMNEDEV1))
+        )
+Linux_Dev2.world=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=TCP)(HOST=TMNMDBD3.Tmn.Int)(PORT=1524))
+            (CONNECT_DATA=
+                (SERVICE_NAME=TMNEDEV2))
+        )
+Linux_Dev3.world=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=TCP)(HOST=TMNMDBD3.Tmn.Int)(PORT=1525))
+            (CONNECT_DATA=
+                (SERVICE_NAME=TMNEDEV3))
+        )
+Linux_Dev4.world=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=TCP)(HOST=TMNMDBD3.Tmn.Int)(PORT=1526))
+            (CONNECT_DATA=
+                (SERVICE_NAME=TMNEDEV4))
+        )
