@@ -39,5 +39,3 @@ SETX PKG_CONFIG %ORACLE_HOME%
 REM Set the user's PATH. We can't just setx PATH %PATH% because %PATH% contains both user and system values, which will bring system values into the user's PATH
 for /f "usebackq tokens=2,*" %A in (`reg query HKCU\Environment /v PATH`) do set USER_PATH=%B
 setx PATH "%USER_PATH%;C:\tools\msys64\mingw64\bin;C:\tools\msys64\usr\bin"
-
-EXIT /B 0
