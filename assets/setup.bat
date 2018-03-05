@@ -28,7 +28,7 @@ IF %ERRORLEVEL% NEQ 0 (
     REM Install Chocolatey
     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 )
-choco install -y msys2
+choco install -y msys2 rktools.2003
 C:\tools\msys64\usr\bin\bash.exe -l -c "pacman -Syu --noconfirm --ask=20 mingw-w64-x86_64-gcc mingw64/mingw-w64-x86_64-pkg-config git"
 
 SETX ORACLE_HOME %ORACLE_HOME%
@@ -36,6 +36,5 @@ SETX OCI_LIB %ORACLE_HOME%\sdk\lib
 SETX TNS_ADMIN %ORACLE_HOME%\network\admin
 SETX PKG_CONFIG %ORACLE_HOME%
 
-REM Set the user's PATH. We can't just setx PATH %PATH% because %PATH% contains both user and system values, which will bring system values into the user's PATH
-for /f "usebackq tokens=2,*" %A in (`reg query HKCU\Environment /v PATH`) do set USER_PATH=%B
-setx PATH "%USER_PATH%;C:\tools\msys64\mingw64\bin;C:\tools\msys64\usr\bin"
+pathman /au C:\tools\msys64\mingw64\bin
+pathman /au C:\tools\msys64\usr\bin
